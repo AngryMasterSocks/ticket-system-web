@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система заявок</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            padding: 1rem;
+            background-color: #0088cc;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        main {
+            flex: 1;
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        button {
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0077b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Система заявок
+    </header>
+    <main>
+        <button onclick="createTicket()">Создать заявку</button>
+        <button onclick="viewMyTickets()">Мои заявки</button>
+        <button onclick="viewOfficeTickets()">Заявки офиса</button>
+    </main>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+
+        function createTicket() {
+            tg.showAlert('Функция создания заявки скоро будет доступна!');
+        }
+
+        function viewMyTickets() {
+            tg.showAlert('Просмотр моих заявок в разработке.');
+        }
+
+        function viewOfficeTickets() {
+            tg.showAlert('Просмотр заявок офиса в разработке.');
+        }
+
+        tg.ready();
+    </script>
+</body>
+</html>
